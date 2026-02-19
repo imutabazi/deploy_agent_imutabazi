@@ -3,7 +3,7 @@
 # ==========================================
 # Project: Student Attendance Tracker Bootstrapper
 # Author: [Innocente Mutabazi Umuhuza /imutabazi]
-# Description: Automates workspace creation, config, and handling.
+# Description: Automates workspace creation, config, and handling
 # System: macOS / BSD Compatible
 # ==========================================
 
@@ -99,8 +99,8 @@ echo "[*] Updating config.json with Warning: $WARN_VAL% and Failure: $FAIL_VAL%.
 CONFIG_FILE="${HELPERS_DIR}/config.json"
 
 # macOS Compatibility: sed -i ''
-sed -i '' "s/\"warning_threshold\": [0-9]*/\"warning_threshold\": $WARN_VAL/" "$CONFIG_FILE"
-sed -i '' "s/\"failure_threshold\": [0-9]*/\"failure_threshold\": $FAIL_VAL/" "$CONFIG_FILE"
+sed -i '' "s/\"warning\": [0-9]*/\"warning\": $WARN_VAL/" "$CONFIG_FILE"
+sed -i '' "s/\"failure\": [0-9]*/\"failure\": $FAIL_VAL/" "$CONFIG_FILE"
 
 # 6. Artificial Delay to allow testing the TRAP
 echo "[*] Finalizing setup (Press Ctrl+C now to test the archive trap)..."
